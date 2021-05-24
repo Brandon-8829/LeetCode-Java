@@ -1,0 +1,21 @@
+class Solution {
+    public boolean squareIsWhite(String coordinates) {
+        boolean white = true;
+        char letter = coordinates.charAt(0);
+        char number = coordinates.charAt(1);
+        if(letter%2 == 0){
+            if(number%2 ==0){
+                white = false;
+            }else{
+                white = true;
+            }
+        }else if(letter%2 == 1){
+            if(number%2 ==0){
+                white = true;
+            }else{
+                white = false;
+            }
+        }
+        return white;
+    }
+}
